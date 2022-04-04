@@ -16,6 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
@@ -27,6 +28,7 @@
     "less-loader": "^10.0.1",
     "mini-css-extract-plugin": "^2.2.2",
     "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.20.0",
     "webpack-cli": "^4.3.0",
     "webpack-dev-server": "^3.11.0"
@@ -35,9 +37,13 @@
     "@ant-design/icons": "^4.6.4",
     "antd": "^4.16.13",
     "axios": "^0.21.4",
+    "dva": "^2.4.1",
+    "file-loader": "^6.2.0",
+    "libgif": "^0.0.3",
     "lodash": "^4.17.21",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "mockjs": "^1.1.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-router-dom": "^5.3.0"
   }
 }

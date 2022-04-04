@@ -1,10 +1,16 @@
 import Mock from 'mockjs';
 
-const url = '/api/user/getList';
 
-export default Mock.mock(url, {
+export const getUserList = Mock.mock('/api/user/getUserList', {
     'list': [
-        {name:'js', age:12},
+        {name: 'js', age: 12},
         {name: 'java', age: 4}
+    ]
+});
+
+export const updateUser = Mock.mock('/api/user/updateUser', {
+    'list': [
+        {name: 'javescript', age: 12},
+        {name: 'java', age: 24}
     ]
 });

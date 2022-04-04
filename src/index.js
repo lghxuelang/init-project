@@ -1,20 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {ConfigProvider} from 'antd';
-import zhCN from 'antd/lib/locale/zh_CN';
+import dva from 'dva';
 
 
-import Route from './route';
+const app = new dva({
+	config: {
+		onError(e) {
+		  e.preventDefault();
+		  console.error(e.message);
+		},
+	}
+});
 
-const App = () => {
-  	return (
-    	<ConfigProvider locale={zhCN}>
-			<Route />
-      	</ConfigProvider>
-  	)
-}
+app.model(require('./models/user').default);
 
-ReactDOM.render(
-  	<App />,
-  	document.getElementById('root')
-);
+app.router(require('./route').default);
+
+app.start('#root');

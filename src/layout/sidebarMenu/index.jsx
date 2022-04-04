@@ -24,7 +24,7 @@ export default ({}) => {
       </Menu.Item>
 
       <SubMenu key="/user" icon={<TeamOutlined />} title="团队">
-        <Menu.Item key="list">管理列表</Menu.Item>
+        <Menu.Item key="list">用户列表</Menu.Item>
         <Menu.Item key="statistic">统计图表</Menu.Item>
       </SubMenu>
     </Menu>

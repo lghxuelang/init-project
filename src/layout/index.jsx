@@ -2,7 +2,7 @@
  * 布局文件入口
  */
 import React, { useState, useEffect } from "react";
-import { Layout, Breadcrumb } from "antd";
+import { Layout, Breadcrumb, Alert } from "antd";
 import {useLocation} from 'react-router-dom'
 import SideBarMenu from "./sidebarMenu";
 
@@ -29,8 +29,8 @@ export default function ({ children }) {
         <SideBarMenu />
       </Sider>
       <Layout className="site-layout">
-        <Header className="site-layout-background" style={{ padding: 0 }} >
-          123
+        <Header className="site-layout-background">
+          <Alert message="标题" type="success"/>
         </Header>
         <Content style={{ margin: "0 16px" }}>
           <Breadcrumb style={{ margin: "16px 0" }}>

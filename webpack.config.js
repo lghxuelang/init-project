@@ -24,6 +24,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           cacheDirectory: true, // 开启缓存，只有在服务器中才生效
+          plugins: ['@babel/plugin-transform-runtime']
         },
       },
       {
@@ -48,6 +49,17 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10 * 1024,
+            },
+          },
+        ],
+      }
     ]
   },
   plugins: [
